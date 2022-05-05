@@ -13,11 +13,9 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: Home },
     { path: '/login', component: Login },
-    { path: '/b/:bid', component: Board, 
-      children : [{ 
-        path: '/c/:cid', component: Card 
-      }]
-  },
+    { path: '/b/:bid', component: Board, children: [
+      { path: 'c/:cid', component: Card }
+    ] },
     { path: '*', component: NotFound }
   ]
 })
